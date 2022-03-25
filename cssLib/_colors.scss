@@ -8,6 +8,7 @@
   }
 
   .text-hover-#{$key} {
+    //  & is a parent selector which lets us to select several targets in one selector
     &:hover {
       color: $val;
     }
