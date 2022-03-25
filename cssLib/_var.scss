@@ -23,6 +23,17 @@ $colors: (
   "white": white,
 ) !default;
 
+
+//  with @debug map-get( varName, thing we want ) we can get that value
+//  with @debug map-has-key( varName, thing we want )  we can know it exists or not (T or F)
+//  with @debug map-remove( varName, thing we want ) and  @debug map-merge( varName, ( "key":value) ) 
+
+//  usage of map:
+.test-btn {
+  background: map-get($colors, "purple");
+}
+
+
 // spacing
 $base-padding: 0.75rem !default;
 $base-margin: 0.75rem !default;
