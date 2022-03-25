@@ -1,0 +1,25 @@
+// .sass files syntax is a bit different with .scss files
+//  tools we use : [ npm, gulp, js, live sass compiler ]
+//  npm dev dependencies : npm install gulp gulp-sass sass --save-dev
+// then we create a gulpfile.js  to compile sass to css
+
+
+// import links to css files and the good part is we don't need to write .scss
+//  by using import we can separate codes and make them cleaner
+
+// ! order of imports is important
+// ! the under file depends un the above
+
+// variables
+@import 'variables';
+
+// base 
+@import 'base';
+
+// colors
+
+
+// components (button, card, navbar etc)
+@import 'components/card';
+
+// utilities (mrg, pdg, opc, etc)

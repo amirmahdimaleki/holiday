@@ -1,0 +1,38 @@
+// use is used for importing a local module( or package idk!) and math is for using mathematics inside sass
+@use 'sass:math';
+
+.card{
+    display: block;
+    padding: $base-pdg;
+    border: $base-border-thickness $base-border-style #000;
+    border-radius: math.div($base-border-rad, 4);
+    box-shadow: $base-box-shadow;
+
+    .card-title{
+         color: $error;
+        font-size: $base-font-size;
+        padding-bottom: $base-pdg;
+        font-weight: bold;
+    }
+
+    .card-body{
+        font-size: $base-font-size;
+        
+        a{
+            text-decoration: none;
+            color: $primary;
+        }
+
+        button{
+            border: $base-border-thickness $base-border-style;
+            border-radius: $base-border-rad;
+            color: $secondary;
+        }
+    }
+}
+
+
+// my using @debug we can see result of sth in console or terminal :
+
+// @debug "hello juju";
+// @debug  math.div($base-border-rad, 4);
