@@ -6,6 +6,7 @@
   .text-#{$key} {
     color: $val;
   }
+  
   .text-hover-#{$key} {
     &:hover {
       color: $val;
