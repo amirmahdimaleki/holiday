@@ -6,7 +6,7 @@
   .text-#{$key} {
     color: $val;
   }
-  
+
   .text-hover-#{$key} {
     &:hover {
       color: $val;
@@ -15,11 +15,16 @@
   .bg-#{$key} {
     background-color: $val;
   }
+
+  //  a simple if condition that says if the color (val) is not equal to black and white do this
+  //  we can also use @else too
   @if ($val != black and $val != white) {
     // light variations
+
     //*  iterate over color from first to ninth one
     @for $i from 1 through 9 {
       .text-#{$key}-light-#{$i} {
+        //  mix is a built in func that mixes colors ( color1, color2, percentage)
         color: mix(white, $val, $i * 10);
       }
       .text-hover-#{$key}-light-#{$i} {
