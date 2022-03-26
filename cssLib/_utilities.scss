@@ -1,3 +1,5 @@
+// ! the names of the utilities(padding-left) are important because the match css properties 
+// we use prefix as classes 
 @use 'sass:math';
 
 $utilities: (
@@ -138,6 +140,22 @@ $utilities: (
       "full": 50%,
     )
   ),
+   "border-style": (
+    "prefix": "bs",
+    "values": (
+      "default": $base-border-style,
+      "none": none,
+      "sld": solid ,
+      "dsh": dashed,
+      "dt": dotted,
+      "grv": groove,
+      "ots": outset,
+      "dbl": double,
+      "ins":inset,
+      "rdg": ridge,
+      "hdn": hidden
+    )
+  ),
   "display": (
     "prefix": "display",
     "values": (
@@ -161,6 +179,40 @@ $utilities: (
 );
 
 // generate utility classes
+
+// ? guide :
+
+// ? property =  "padding-left" , 
+
+// ? map = (
+//? "prefix": "pl",
+//? "values": (
+//? "0": 0,
+//? "1": $base-padding,
+//? "2": $base-padding * 2,
+//? "3": $base-padding * 4,
+//? "4": $base-padding * 6,
+//? "5": $base-padding * 8
+//? ),
+
+// ? utilities =  the great map
+
+// ? $prefix = "pl" 
+
+// ? $values =
+//? "values": (
+//? "0": 0,
+//? "1": $base-padding,
+//? "2": $base-padding * 2,
+//? "3": $base-padding * 4,
+//? "4": $base-padding * 6,
+//? "5": $base-padding * 8
+//? ),
+
+// ? k = "4" , v = $base-padding * 2,
+
+
+
 @each $property, $map in $utilities {
   $prefix: map-get($map, "prefix");
   $values: map-get($map, "values");
