@@ -1,3 +1,4 @@
+//  by using % instead of . the class will not be compiled into css
 %flex-layout {
   width: 100%;
   display: flex;
@@ -7,6 +8,8 @@
 }
 
 .navbar {
+  //  extend is a kind of mixin than we can use the rules of the value extended (flex-layout)
+  //  the differences are extend does not accept argument , extend compiling to css way is different: flex-layout, navbar{}  => in css
   @extend %flex-layout;
   padding: $base-padding $base-padding * 2;
   box-shadow: $base-box-shadow;
