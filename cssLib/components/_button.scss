@@ -1,3 +1,5 @@
+// mixin is a way to gruop some css properties and rules
+//  mixins also include arguments like this bg-color and default value
 @mixin btn($bg-color: #e2e2e2) {
   text-decoration: none;
   cursor: pointer;
@@ -14,8 +16,10 @@
 
 @each $key, $val in $colors {
   .btn-#{$key} {
+    // with include we can use mixin here
     @include btn($val);
     &:hover {
+      //  lighten is a built in function that takes a color and lightens it by the percent given
       background-color: lighten($val, 5);
     }
   }
@@ -28,6 +32,7 @@
   }
   .btn-complement-#{$key} {
     @include btn($val);
+    //  the func :
     color: light-comp($val);
     &:hover {
       color: $val;

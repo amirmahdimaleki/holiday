@@ -1,4 +1,6 @@
+// func     name      arg
 @function light-comp($color) {
+  //  var       built in func which gives us complement color that we gave
   $complement: complement($color);
   $light-complement: lighten($complement, 30%);
   @return $light-complement;
