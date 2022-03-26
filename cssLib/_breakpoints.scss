@@ -8,6 +8,7 @@ $breakpoints: (
 
 @mixin xs {
   @media (min-width: map-get($breakpoints, "xs")) {
+    //  content means that we dont need to set rules and the mixin is reusable and whatever we set will be applied for it
     @content;
   }
 }
