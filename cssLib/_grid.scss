@@ -24,6 +24,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 // grid gaps
 @each $key, $val in $grid-gaps {
+  //  gets all of the flex items(elements) and adds gap(padding) to all of them
   .gap-#{$key} > * {
     padding: $val;
   }
