@@ -28,3 +28,16 @@ body{
     border-radius: 8px;
     background-color: #fff;
 }
+
+.hold{
+   border:4px solid rgb(85, 12, 85) ;
+}
+
+.hovered{
+  background: rgb(33, 121, 143);
+  border-style: dotted;
+}
+
+.invisible{
+    display: none;
+}
