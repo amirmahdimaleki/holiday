@@ -8,3 +8,13 @@ fill.addEventListener('dragend', dragEnd)
 
 // * drag func
 
+function dragStart(){
+
+    //  this is the "fill" element
+    this.className+= 'hold'
+    setTimeout(()=> this.className = 'invisible',0) 
+}
+
+function dragEnd(){
+
+}
