@@ -1,3 +1,5 @@
+// !    PART ONE ============================================================================================
+
 const fill = document.querySelector('.fill');
 const empty = document.querySelectorAll('.empty');
 
@@ -49,3 +51,7 @@ function dragDrop(){
     // * appends the div with fill class inside that div
     this.append(fill);
 }
+
+
+
+ //  !     PART TWO ===========================================================================================
