@@ -55,3 +55,46 @@ function dragDrop(){
 
 
  //  !     PART TWO ===========================================================================================
+ 
+
+ const draggableList = document.getElementById('draggable-list')
+ const check = document.getElementById('check')
+
+ const companies = [
+    'apple',
+    'samsung',
+    'xiaomi',
+    'asus',
+    'lenovo',
+    'hp',
+    'dell',
+    'microsoft',
+    'huawei',
+    'google'
+ ]
+
+//  * Store list items
+ const finalList = []
+
+let dragStartIndex;
+
+createList()
+
+// * append list items to dom
+function createList(){
+    [...companies]
+    .forEach((co,ind)=>{
+        const li = document.createElement('li')
+        li.setAttribute('data-index', ind)
+
+        li.innerHTML = `
+        <span class="number">${ind+1}</span>
+        <div class="draggable" draggable="true">
+        <p class="company-name"> ${co} </p>
+        <i class="fas fa-grip-line"></i>
+        </div>
+        `
+        companies.push(li)
+        draggableList.appendChild(li) 
+    })
+}
