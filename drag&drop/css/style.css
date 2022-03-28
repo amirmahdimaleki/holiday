@@ -1,7 +1,7 @@
 /* ! PART ONE =============================================================================================== */
 
 body{
-    background-color: rgb(71, 209, 71) ;
+    background-color: rgb(124, 235, 166) ;
 }
 
 .fill{
@@ -21,7 +21,7 @@ body{
     height: 110px;
     width: 110px;
     margin: 11px;
-    border: 4px solid rgb(124, 235, 166);
+    border: 4px solid rgb(71, 209, 71);
     border-radius: 8px;
     background-color: #fff;
 }

@@ -82,10 +82,15 @@ createList()
 
 // * append list items to dom
 function createList(){
+    // copy the array
     [...companies]
+    // change it to an object with a random sortNum
     .map(a =>({value:a, sort:Math.random()}))
+    // sort the array by that random sortNum
     .sort((a, b)=> a.sort - b.sort)
+    // put the value of the object into the list (turn into an array of strings)
     .map(a=>a.value)
+    // list dom
     .forEach((co,ind)=>{
         const li = document.createElement('li')
         li.setAttribute('data-index', ind)
