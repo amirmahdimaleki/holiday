@@ -1,4 +1,7 @@
 /* ! PART ONE =============================================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500&family=Quicksand:wght@300;324;400;500&family=Raleway:ital,wght@0,510;0,700;1,100;1,300;1,700&display=swap');
+/* font-family: 'Quicksand', sans-serif; */
+
 
 body{
     background-color: rgb(124, 235, 166) ;
@@ -40,3 +43,21 @@ body{
 }
 
 /* ! PART ONE =============================================================================================== */
+
+.second{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.draggable-list{
+    border: 2px solid rgb(202, 117, 117);
+    color: #000;
+    padding: 0;
+    list-style-type: none;
+}
+
+
