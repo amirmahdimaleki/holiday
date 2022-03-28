@@ -42,7 +42,7 @@ body{
     display: none;
 }
 
-/* ! PART ONE =============================================================================================== */
+/* ! PART TWO =============================================================================================== */
 
 .second{
     display: flex;
@@ -58,6 +58,38 @@ body{
     color: #000;
     padding: 0;
     list-style-type: none;
+}
+
+.draggable-list li{
+   display: flex;
+   flex: 1;
+}
+.draggable-list li:not(:last-of-type){
+    border-bottom: 1px solid #000
+}
+
+.draggable-list .number{
+    display: flex;
+    background-color: rgb(91, 124, 94);
+    align-items: center;
+    justify-content:center;
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+}
+
+.draggable-list .company-name{
+    margin: 0 20px 0 0;
+    font-size: 18px;
+}
+
+.draggable{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 15px;
+    flex: 1;
 }
 
 

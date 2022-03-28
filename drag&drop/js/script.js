@@ -99,7 +99,7 @@ function createList(){
         <span class="number">${ind+1}</span>
         <div class="draggable" draggable="true">
         <p class="company-name"> ${co} </p>
-        <i class="fas fa-grip-line"></i>
+        <i class="fas fa-grip-lines"></i>
         </div>
         `
         companies.push(li)
