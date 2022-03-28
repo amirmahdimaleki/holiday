@@ -87,10 +87,10 @@ body{
     font-size: 18px;
 }
 .draggable-list li.right .company-name{
-   color: rgb(135, 233, 135);
+   color: rgb(25, 139, 25);
 }
 .draggable-list li.wrong .company-name{
-  color: rgb(255, 62, 62);
+  color: rgb(218, 36, 4);
 }
 
 .draggable{

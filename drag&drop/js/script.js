@@ -73,7 +73,7 @@
     'google'
  ]
 
-//  * Store list items
+//   Store list items
  const finalList = []
 
 let dragStartIndex;
@@ -102,44 +102,78 @@ function createList(){
         <i class="fas fa-grip-lines"></i>
         </div>
         `
-        companies.push(li)
+        finalList.push(li)
         draggableList.appendChild(li) 
     })
 
     addEventListeners()
 }
 
+    //  drag functions
+    function dragStart(){
+    dragStartIndex = +this.closest('li').getAttribute('data-index')
+    }
 
-function dragStart(){
+    function dragEnter(){
+        this.classList.add('over')
+    }
 
-}
-function dragOver(){
+    function dragLeave(){
+        this.classList.remove('over')
+    }
+
+    function dragOver(e){
+        e.preventDefault()
+    }
+
+    function dragDrop(){
+        const dragEndIndex = +this.getAttribute('data-index')
+        swapItems(dragStartIndex, dragEndIndex)
+        this.classList.remove('over')
+    }
+    //   replace dragged item 
+    function  swapItems(from, to){
+    const itemOne = finalList[from].querySelector('.draggable') 
+    const itemTwo = finalList[to].querySelector('.draggable')
     
-}
-function dragDrop(){
-    
-}
-function dragenter(){
-    
-}
-function dragLeave(){
-    
+    finalList[from].appendChild(itemTwo)
+    finalList[to].appendChild(itemOne)
+    }
+
+    // order btn func that checks the correct order
+     function checkOrder(){
+        finalList.forEach((listItem, index) => {
+          const companyName = listItem.querySelector('.draggable')
+          .innerText.trim()
+
+          if (companyName !== companies[index]){
+             listItem.classList.add('wrong')
+
+          } else {
+            listItem.classList.remove('wrong')
+            listItem.classList.add('right')
+          }
+
+        })
+     } 
+
+
+//   drag event listeners
+ function addEventListeners(){
+     const draggables = document.querySelectorAll('.draggable')
+     const dragListItems = document.querySelectorAll('.draggable-list li')
+
+      draggables.forEach(draggable =>{
+         draggable.addEventListener('dragstart', dragStart)
+      })
+
+     dragListItems.forEach(item =>{
+     item.addEventListener('dragover', dragOver)
+     item.addEventListener('drop', dragDrop)
+     item.addEventListener('dragenter', dragEnter)
+     item.addEventListener('dragleave', dragLeave)
+  })
 }
 
 
-
-function addEventListeners(){
-    const draggables = document.querySelectorAll('.draggable')
-    const dragListItems = document.querySelectorAll('.draggable-list li')
-
-    draggables.forEach(draggable =>{
-        draggable.addEventListener('dragstart', dragStart)
-    })
-
-    dragListItems.forEach(item =>{
-       item.addEventListener('dragover', dragOver)
-       item.addEventListener('drop', dragDrop)
-       item.addEventListener('dragenter', dragenter)
-       item.addEventListener('dragleave', dragLeave)
-    })
-}
+   check.addEventListener('click', checkOrder)
