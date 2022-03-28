@@ -54,7 +54,7 @@ body{
 }
 
 .draggable-list{
-    border: 2px solid rgb(202, 117, 117);
+    border: 2px solid rgb(23, 128, 93);
     color: #000;
     padding: 0;
     list-style-type: none;
@@ -78,6 +78,10 @@ body{
     width: 60px;
 }
 
+.draggable-list li.over{
+    background-color: rgba(124, 235, 167, 0.637) ;
+}
+
 .draggable-list .company-name{
     margin: 0 20px 0 0;
     font-size: 18px;
@@ -98,4 +102,24 @@ body{
     flex: 1;
 }
 
+.check-btn{
+    background-color: rgb(24, 184, 162) ;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
+.check-btn:active{
+    transform: scale(0.98);
+
+}
+
+.check-btn:focus{
+    outline: none;
+}
+
+.check-btn:hover{
+    color: white;
+    background-color: rgb(0, 145, 125)  ;
+}
