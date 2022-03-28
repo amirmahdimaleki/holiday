@@ -1,56 +1,56 @@
 // !    PART ONE ============================================================================================
 
-const fill = document.querySelector('.fill');
-const empty = document.querySelectorAll('.empty');
+// const fill = document.querySelector('.fill');
+// const empty = document.querySelectorAll('.empty');
 
-// * fill event listener
+// // * fill event listener
 
-fill.addEventListener('dragstart', dragStart);
-fill.addEventListener('dragend', dragEnd);
-
-
-// * because they are node lists we should loop throw empties and call drag events
-for(emp of empty){
-    emp.addEventListener('dragover', dragOver);
-    emp.addEventListener('dragenter', dragEnter);
-    emp.addEventListener('dragleave', dragLeave);
-    emp.addEventListener('drop', dragDrop);
-}
+// fill.addEventListener('dragstart', dragStart);
+// fill.addEventListener('dragend', dragEnd);
 
 
-// * drag func
+// // * because they are node lists we should loop throw empties and call drag events
+// for(emp of empty){
+//     emp.addEventListener('dragover', dragOver);
+//     emp.addEventListener('dragenter', dragEnter);
+//     emp.addEventListener('dragleave', dragLeave);
+//     emp.addEventListener('drop', dragDrop);
+// }
 
-function dragStart(){
 
-    //  this is the "fill" element
-    this.className+= ' hold';
-    setTimeout(()=>(this.className = 'invisible'), 0);
-};
+// // * drag func
 
-function dragEnd(){
-   this.className = 'fill';
-};
+// function dragStart(){
 
-function dragOver(e){
- e.preventDefault();
-};
+//     //  this is the "fill" element
+//     this.className+= ' hold';
+//     setTimeout(()=>(this.className = 'invisible'), 0);
+// };
 
-function dragEnter(e){
- e.preventDefault();
+// function dragEnd(){
+//    this.className = 'fill';
+// };
 
-//  ? "+=" appends and "=" replaces
- this.className += 'hovered';
-};
+// function dragOver(e){
+//  e.preventDefault();
+// };
 
-function dragLeave(e){
-    this.className = 'empty';
-  };
+// function dragEnter(e){
+//  e.preventDefault();
 
-function dragDrop(){
-    this.className = 'empty';
-    // * appends the div with fill class inside that div
-    this.append(fill);
-}
+// //  ? "+=" appends and "=" replaces
+//  this.className += 'hovered';
+// };
+
+// function dragLeave(e){
+//     this.className = 'empty';
+//   };
+
+// function dragDrop(){
+//     this.className = 'empty';
+//     // * appends the div with fill class inside that div
+//     this.append(fill);
+// }
 
 
 
@@ -104,5 +104,42 @@ function createList(){
         `
         companies.push(li)
         draggableList.appendChild(li) 
+    })
+
+    addEventListeners()
+}
+
+
+function dragStart(){
+
+}
+function dragOver(){
+    
+}
+function dragDrop(){
+    
+}
+function dragenter(){
+    
+}
+function dragLeave(){
+    
+}
+
+
+
+function addEventListeners(){
+    const draggables = document.querySelectorAll('.draggable')
+    const dragListItems = document.querySelectorAll('.draggable-list li')
+
+    draggables.forEach(draggable =>{
+        draggable.addEventListener('dragstart', dragStart)
+    })
+
+    dragListItems.forEach(item =>{
+       item.addEventListener('dragover', dragOver)
+       item.addEventListener('drop', dragDrop)
+       item.addEventListener('dragenter', dragenter)
+       item.addEventListener('dragleave', dragLeave)
     })
 }
