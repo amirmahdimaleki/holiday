@@ -81,3 +81,20 @@ form button{
     display: block;
     margin: 30px auto 10px;
 }
+
+
+.input-group span {
+    position: absolute;
+    bottom: 12px;
+    right: 17px;
+    font-size: 14px;
+    color: rgba(255, 0, 0, 0.966); 
+}
+
+#submit-error{
+    color: rgba(255, 0, 0, 0.966); 
+}
+
+.input-group span i{
+    color: rgb(36, 173, 36);
+}
