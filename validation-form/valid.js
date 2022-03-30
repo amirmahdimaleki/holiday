@@ -1,7 +1,7 @@
 const nameError = document.getElementById('name-error')
 const phoneError = document.getElementById('phone-error')
 const emailError = document.getElementById('email-error')
-const messageError = document.getElementById('name-error')
+const messageError = document.getElementById('message-error')
 const submitError = document.getElementById('submit-error')
 
 function validateName(){
@@ -13,7 +13,7 @@ function validateName(){
         nameError.innerHTML = 'Write full name'
         return false
     }
-    nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
+    nameError.innerHTML = '<i class="fas fa-check-circle"></i>'
     return true
 }
 
@@ -30,20 +30,20 @@ function validatePhone(){
         phoneError.innerHTML = 'phone no is required'
         return false
     }
-    phoneError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
+    phoneError.innerHTML = '<i class="fas fa-check-circle"></i>'
     return true
 }
 
 function validateEmail() {
     const email = document.getElementById('contact-email').value
-    if (email.length === 0) {
+    if (email.length == 0) {
         emailError.innerHTML = 'Email is required'
         return false
-    }else if (!email.match(/^[A-Za-z]\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+    }else if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
         emailError.innerHTML = 'Email Invalid'
         return false
     }
-    emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
+    emailError.innerHTML = '<i class="fas fa-check-circle"></i>'
     return true
 }
 
@@ -56,7 +56,7 @@ function validateMessage(){
         messageError.innerHTML = left + 'more characters required'
         return false
     }
-    messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
+    messageError.innerHTML = '<i class="fas fa-check-circle"></i>'
     return true
 }
 
@@ -64,7 +64,8 @@ function validateForm(){
     if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
         submitError.style.display = 'block'
         submitError.innerHTML = 'Please fix error to submit'
-        setTimeout(()=>submitError.style.display = 'none', 3000)
+        setTimeout(()=>
+        {submitError.style.display = 'none'}, 3000)
         return false
     }
 }
