@@ -64,7 +64,7 @@
     border-radius: 6px;
     box-shadow: 0 5px 10px rgb(255, 255, 255, 0.4);
     display: none;
-    transform: top 0.4s;
+    transform: top 0.5s;
 }
 
 .nav-links li:hover a{
@@ -72,7 +72,7 @@
     transition: 0.3s;
 }
 
-.nav-links list-style:hover ~ .active{
+.nav-links li:hover ~ .active{
      display: block;
 }
 
