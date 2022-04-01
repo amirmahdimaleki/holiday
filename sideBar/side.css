@@ -52,3 +52,71 @@
     font-size: 22px;
     margin-right: 20px;
 }
+
+.active{
+    background: #fff;
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    top: 2.6%;
+    z-index: -1;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgb(255, 255, 255, 0.4);
+    display: none;
+    transform: top 0.4s;
+}
+
+.nav-links li:hover a{
+    color:  #0d74f5;
+    transition: 0.3s;
+}
+
+.nav-links list-style:hover ~ .active{
+     display: block;
+}
+
+.nav-links li:nth-child(1):hover ~ .active{
+    top: 2.6%;
+}
+.nav-links li:nth-child(2):hover ~ .active{
+    top: 19.2%;
+}
+.nav-links li:nth-child(3):hover ~ .active{
+    top: 35.8%;
+}
+.nav-links li:nth-child(4):hover ~ .active{
+    top: 52.4%;
+}
+.nav-links li:nth-child(5):hover ~ .active{
+    top:69%;
+}
+.nav-links li:nth-child(6):hover ~ .active{
+    top: 85.6%;
+}
+
+.logo-icon{
+    display: none;
+    width: 45px;
+}
+
+@media only screen and (max-width:600px){
+    .side-nav{
+        width: 110px;
+    }
+    .logo-icon{
+        display: block;
+    }
+    .logo-img{
+        display: none;
+    }
+    .nav-links li a p{
+        display: none;
+    }
+    .nav-links li a i{
+        margin-right: 0;
+    }
+    .nav-links li a{
+        justify-content: center;
+    }
+}
