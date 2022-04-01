@@ -44,4 +44,11 @@
     color: #fff;
     text-decoration: none;
     padding: 10px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a i{
+    font-size: 22px;
+    margin-right: 20px;
 }
