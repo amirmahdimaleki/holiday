@@ -16,7 +16,7 @@ const createPost = async (e) => {
         body: JSON.stringify(doc)
     })
 
-    window.location.replace('./index.html')
+    window.location.replace('../index.html')
 }
 
 form.addEventListener('submit', createPost)
